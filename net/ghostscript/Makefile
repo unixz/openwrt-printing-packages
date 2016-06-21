@@ -11,7 +11,7 @@ PKG_NAME:=ghostscript
 PKG_VERSION:=9.06
 PKG_RELEASE:=2
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=http://downloads.ghostscript.com/public/$(PKG-SOURCE)
+PKG_SOURCE_URL:=http://downloads.ghostscript.com/public/old-gs-releases/
 PKG_MD5SUM:=153ddb0622cb155d2f600146f1e28d84
 
 PKG_BUILD_DEPENDS:=ghostscript/host
@@ -26,7 +26,8 @@ define Package/ghostscript
   SECTION:=net
   CATEGORY:=Network
   TITLE:=ghostscript
-  DEPENDS:=+cups +libcupsimage +libfreetype +fontconfig +libtiff +libjpeg +libpng +libexpat +lcms2 +zlib +ghostscript-fonts-std
+  DEPENDS:=+cups +libcupsimage +libfreetype +fontconfig +libtiff \
+	+libjpeg +libpng +libexpat +lcms2 +zlib +ghostscript-fonts-std
   SUBMENU:=Printing
 endef
 
@@ -68,6 +69,7 @@ define Host/Configure
 	--without-jbig2dec \
 	--without-pdftoraster \
 	--without-libpaper \
+	--with-libiconv=no \
 	--disable-gtk	\
 	--without-libidn)
 endef
