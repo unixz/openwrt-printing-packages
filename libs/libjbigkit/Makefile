@@ -16,7 +16,6 @@ define Package/libjbigkit
 	SECTION:=libs
 	CATEGORY:=Libraries
 	TITLE:=JBIG-KIT library
-	#DESCRIPTION:=This variable is obsolete. use the Package/name/description define instead!
 	DEPENDS:=
 	URL:=http://freecode.com/projects/jbigkit/
 endef
