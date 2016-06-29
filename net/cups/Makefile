@@ -385,6 +385,7 @@ define Build/Configure
 		--with-system-groups="root" \
 		--with-local_protocols='dnssd' \
 		--enable-default-shared \
+		--disable-acl \
 		--without-perl \
 		--without-python \
 		--without-php \
