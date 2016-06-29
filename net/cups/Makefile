@@ -8,7 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=cups
-PKG_VERSION:=2.0.3
+PKG_VERSION:=2.0.4
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-source.tar.bz2
@@ -17,7 +17,7 @@ PKG_SOURCE_URL:= \
 	ftp://ftp.easysw.com/pub/cups/$(PKG_VERSION) \
 	ftp://ftp3.easysw.com/pub/cups/$(PKG_VERSION) \
 	http://www.cups.org/software/$(PKG_VERSION)
-PKG_MD5SUM:=8d98b85edbdab7ab03739c9622f570e8
+PKG_MD5SUM:=f5c847d9a4fac6c4c66fb0526a7afaae
 
 TARGET_LDFLAGS+=-Wl,-rpath-link=$(STAGING_DIR)/usr/lib
 
