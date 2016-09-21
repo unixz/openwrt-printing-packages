@@ -14,7 +14,7 @@ PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://downloads.ghostscript.com/public/old-gs-releases/
 PKG_MD5SUM:=153ddb0622cb155d2f600146f1e28d84
 
-PKG_BUILD_DEPENDS:=ghostscript/host
+PKG_BUILD_DEPENDS:=ghostscript/host zlib/host
 PKG_INSTALL:=1
 
 # During its build Ghostscript needs to run some binaries of its
@@ -62,7 +62,6 @@ endef
 
 # Host build should also use system's zlib
 define Host/Configure
-	(cd $(HOST_BUILD_DIR) && $(RM) -r zlib)
 	$(call Host/Configure/Default, \
 	--without-x \
 	--without-jasper \
