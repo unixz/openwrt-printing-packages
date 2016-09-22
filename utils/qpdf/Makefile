@@ -39,6 +39,10 @@ endef
 CONFIGURE_ARGS+= \
 	--with-random=/dev/urandom
 
+define Build/Patch
+	cd $(PKG_BUILD_DIR); sed -i 's|@LIBTOOL@|$$$$(SHELL) $$$$(top_builddir)/libtool --tag=CXX|' autoconf.mk.in
+endef
+
 define Package/qpdf/install
 	$(INSTALL_DIR) $(1)/usr/bin $(1)/usr/lib
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/* $(1)/usr/bin/
