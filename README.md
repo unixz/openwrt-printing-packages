@@ -4,11 +4,11 @@ This is a [package feed] aiming at providing a complete printing stack
 for OpenWrt.
 
 Notably it has:
-- Ghostscript 9.06
-- Gutenprint 5.2.9
-- Cups 1.6.3
-- OpenPrinting's cups-filters 1.0.37
-- poppler 0.24.1
+- Ghostscript 9.20
+- Gutenprint 5.2.11
+- Cups 2.2.1
+- OpenPrinting's cups-filters 1.11.4
+- poppler 0.47.0
 - many other packages to make sure the ones above work...
 
 [package feed]: http://wiki.openwrt.org/doc/devel/feeds
@@ -23,6 +23,7 @@ Notably it has:
 [external storage]: http://wiki.openwrt.org/doc/howto/extroot
 
 - set up a [cross-compilation environment]
+
 [cross-compilation environment]: http://wiki.openwrt.org/doc/devel/crosscompile
 
 - add this line to your `feeds.conf` or `feeds.conf.default`

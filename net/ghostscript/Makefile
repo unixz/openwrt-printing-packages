@@ -8,13 +8,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ghostscript
-PKG_VERSION:=9.06
-PKG_RELEASE:=2
+PKG_VERSION:=9.20
+PKG_RELEASE:=1
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=http://downloads.ghostscript.com/public/old-gs-releases/
+PKG_SOURCE_URL:=https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs920
 PKG_MD5SUM:=153ddb0622cb155d2f600146f1e28d84
 
-PKG_BUILD_DEPENDS:=ghostscript/host
+PKG_BUILD_DEPENDS:=ghostscript/host zlib/host
 PKG_INSTALL:=1
 
 # During its build Ghostscript needs to run some binaries of its
@@ -44,7 +44,7 @@ define Build/Configure
 	--without-jasper \
 	--without-jbig2dec  \
 	--with-install-cups \
-	--with-fontpath /usr/share/fonts/ghostscript/fonts/:/usr/share/ghostscript/9.06/Resource/Font/:/usr/share/fonts/default/ghostscript/:/usr/share/fonts/default/TrueType/:/usr/share/fonts/default/Type1:/usr/share/cups/fonts/:/usr/share/fonts/:/usr/share/fonts/ubuntu/:/usr/share/fonts/truetype/liberation/ \
+	--with-fontpath /usr/share/fonts/ghostscript/fonts/:/usr/share/ghostscript/$(PKG_VERSION)/Resource/Font/:/usr/share/fonts/default/ghostscript/:/usr/share/fonts/default/TrueType/:/usr/share/fonts/default/Type1:/usr/share/cups/fonts/:/usr/share/fonts/:/usr/share/fonts/ubuntu/:/usr/share/fonts/truetype/liberation/ \
 	--with-system-libtiff \
 	--with-cups-serverbin="/usr/lib/cups" \
 	--with-cups-serverroot="/etc/cups" \
@@ -86,7 +86,7 @@ define Package/ghostscript/install
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/* $(1)/usr/bin/
 	#--------------------------------------------------------------
 	# Unlike what
-	# http://ghostscript.com/doc/9.06/Use.htm#Finding_files states
+	# http://ghostscript.com/doc/$(PKG_VERSION)/Use.htm#Finding_files states
 	# GS is /not/ taking the first dir of GS_LIB_DEFAULT (perhaps
 	# because it does not exist in my system?). The solution in
 	# place is to replace 'gs' by a script that sets GS_LIB

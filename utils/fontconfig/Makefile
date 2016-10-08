@@ -9,13 +9,11 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=fontconfig
 PKG_VERSION:=2.12.1
-#PKG_VERSION:=2.10.91
 PKG_RELEASE:=2
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://fontconfig.org/release/
 PKG_MD5SUM:=b5af5a423ee3b5cfc34846838963c058
-#PKG_MD5SUM:=c795bb39fab3a656e5dff8bad6a199f6
 
 PKG_INSTALL:=1
 
