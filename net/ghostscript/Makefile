@@ -12,7 +12,7 @@ PKG_VERSION:=9.20
 PKG_RELEASE:=1
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs920
-PKG_MD5SUM:=153ddb0622cb155d2f600146f1e28d84
+PKG_MD5SUM:=93c5987cd3ab341108be1ebbaadc24fe
 
 PKG_BUILD_DEPENDS:=ghostscript/host zlib/host
 PKG_INSTALL:=1
