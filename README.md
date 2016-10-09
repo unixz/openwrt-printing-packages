@@ -1,7 +1,7 @@
-# Printing packages for OpenWrt
+# Printing packages for OpenWrt/LEDE
 
 This is a [package feed] aiming at providing a complete printing stack
-for OpenWrt.
+for [OpenWrt] or [LEDE].
 
 Notably it has:
 - Ghostscript 9.20
@@ -10,6 +10,10 @@ Notably it has:
 - OpenPrinting's cups-filters 1.11.4
 - poppler 0.47.0
 - many other packages to make sure the ones above work...
+
+[OpenWrt]: https://openwrt.org/
+
+[LEDE]: https://www.lede-project.org/
 
 [package feed]: http://wiki.openwrt.org/doc/devel/feeds
 
